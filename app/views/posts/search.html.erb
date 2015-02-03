@@ -1,0 +1,13 @@
+<h4><%= @results.total_count %> posts and comments containing "<%= @query %>"</h4>
+<% @results.each do |result| %>
+  <div class="post_container">
+    <%= render result, :search_result => true %>
+    <%= link_to "See full post",
+      "/posts/#{result.class == Post ? result.id : result.post.id}",
+      class: 'see_more'
+    %>
+  </div>
+<% end %>
+  <%= paginate @results %>
+<%# <%= link_to_next_page @results, 'Next Page' %>
+<%# <%= link_to_previous_page @results, 'Previous Page' %>
