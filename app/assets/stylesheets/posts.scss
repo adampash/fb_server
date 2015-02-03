@@ -8,6 +8,15 @@ body {
   background: #E9EAED;
   font-family: Helvetica, Arial;
 
+  .searchbox {
+    // border-radius: 4px;
+    font-size: 14px;
+    // height: 16px;
+    width: 100%;
+    max-width: 465px;
+    margin-bottom: 10px;
+  }
+
   .post_container {
     max-width: 100%;
     border: 1px solid;

@@ -1,3 +1,9 @@
-<% @posts.each do |post| %>
-  <%= render post %>
+<% unless @query.nil? %>
+  <h4><%= @posts.total_count %> results for "<%= @query %>"</h4>
 <% end %>
+<div class="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div>
+<%= paginate @posts %>
