@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'rails_autolink'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -24,6 +25,8 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
+  gem 'guard-livereload', require: false
+  gem "rack-livereload"
 end
 group :development, :test do
   gem 'factory_girl_rails'

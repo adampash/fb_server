@@ -1,6 +1,12 @@
 Fb Server
 ================
 
+Post deploy, run:
+
+```bash
+heroku config:add TZ="America/New_York"
+```
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem

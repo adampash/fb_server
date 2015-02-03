@@ -1,0 +1,46 @@
+.comments {
+  .more_comments {
+    cursor: pointer;
+    color: #3B5998;
+    font-size: 12px;
+    margin-left: 52px;
+    padding-bottom: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  background-color: #f6f7f8;
+  border-top: 1px solid #e1e2e3;
+  .comment {
+    font-size: 12px;
+    padding: 12px;
+    min-height: 40px;
+    line-height: 15.3599996566772px;
+    .comment_avatar {
+      width: 32px;
+      height: 32px;
+      float: left;
+    }
+    .text_container {
+      margin-left: 40px;
+      .message {
+        // margin-left: 40px;
+        display: inline;
+        a {
+          color: #3b5998;
+        }
+      }
+      .author_name {
+        line-height: 15.3599996566772px;
+        display: inline;
+        font-size: 12px;
+        color: #3B5998;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .timestamp {
+        color: #9197a3;
+      }
+    }
+  }
+}

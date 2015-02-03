@@ -4,6 +4,11 @@
   <title>FbServer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <% if Rails.env.development? %>
+    <script type='text/javascript' id="__bs_script__">
+      document.write("<script async src='//HOST:3001/browser-sync/browser-sync-client.2.0.0-rc5.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+    </script>
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>

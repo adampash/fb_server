@@ -1,0 +1,42 @@
+<div class="post_container">
+  <div class="post">
+    <div class="author">
+      <img class="author_img" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/v/t1.0-1/c15.0.50.50/p50x50/10645251_10150004552801937_4553731092814901385_n.jpg?oh=37c91237919012390c2413251948e1fc&oe=55559310&__gda__=1431008679_64cd910771f70da726aa3313e1fcda2a" />
+      <div class="author_name">
+        <%= post.from_name %>
+      </div>
+      <div class="timestamp">
+        <%= link_to(post.created_time.strftime("%B %-d at %-l:%M%P"), post.url) %>
+      </div>
+    </div>
+    <%= simple_format(auto_link(post.message, :html => {target: '_blank'}), class: 'message') %>
+    <% if post.post_type == "link" %>
+      <div class="link">
+        <% unless post.picture.nil? %>
+          <img src="<%= post.picture.gsub('158', '470') %>" />
+        <% end %>
+        <div class="story_text">
+          <h4 class="title">
+            <%= link_to post.name, post.link, target: '_blank' %>
+          </h4>
+          <p class="description">
+          <%= post.description %>
+          </p>
+          <div class="caption">
+            <%= post.caption %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="comments">
+    <% post.comments[0..2].each do |comment| %>
+      <%= render comment %>
+    <% end %>
+    <% if post.comments.length > 3 %>
+      <div class="more_comments" id="<%= post.id %>">
+        View <%= post.comments.length - 3 %> more comments
+      </div>
+    <% end %>
+  </div>
+</div>
