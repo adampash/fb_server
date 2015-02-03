@@ -6,7 +6,7 @@
         <%= post.from_name %>
       </div>
       <div class="timestamp">
-        <%= link_to(post.created_time.strftime("%B %-d at %-l:%M%P"), post.url) %>
+        <%= link_to(post.created_time.strftime("%B %-d at %-l:%M%P"), "/posts/#{post.id}") %>
       </div>
     </div>
     <%= simple_format(auto_link(post.message, :html => {target: '_blank'}), class: 'message') %>
