@@ -47,11 +47,19 @@
   line-height: 15.3599996566772px;
   display: inline;
   font-size: 12px;
-  color: #3B5998;
   cursor: pointer;
   font-weight: bold;
 }
-/* line 43, /Users/ap/code/labs/fb_server/app/assets/stylesheets/comments.scss */
+/* line 41, /Users/ap/code/labs/fb_server/app/assets/stylesheets/comments.scss */
+.comments .comment .text_container .author_name a {
+  color: #3B5998;
+  text-decoration: none;
+}
+/* line 44, /Users/ap/code/labs/fb_server/app/assets/stylesheets/comments.scss */
+.comments .comment .text_container .author_name a:hover {
+  text-decoration: underline;
+}
+/* line 49, /Users/ap/code/labs/fb_server/app/assets/stylesheets/comments.scss */
 .comments .comment .text_container .timestamp {
   color: #9197a3;
 }
@@ -63,13 +71,57 @@ body {
   font-family: Helvetica, Arial;
 }
 /* line 11, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body mark {
+  padding: 3px 0;
+  background-color: #ECF927;
+}
+/* line 16, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .searchbox {
   font-size: 14px;
   width: 100%;
   max-width: 465px;
   margin-bottom: 10px;
 }
-/* line 20, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 24, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body .total_results {
+  color: #9197a3;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 3px;
+}
+/* line 33, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body nav.pagination {
+  font-size: 12px;
+  margin: 0 auto;
+  width: 470px;
+  display: inline-block;
+  text-align: center;
+}
+/* line 39, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body nav.pagination a {
+  color: #3B5998;
+  text-decoration: none;
+}
+/* line 42, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body nav.pagination a:hover {
+  text-decoration: underline;
+}
+/* line 48, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body .see_more {
+  text-align: right;
+  color: #3B5998;
+  font-size: 13px;
+  display: block;
+  text-decoration: none;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+/* line 56, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body .see_more:hover {
+  text-decoration: underline;
+}
+/* line 61, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container {
   max-width: 100%;
   border: 1px solid;
@@ -78,16 +130,16 @@ body .post_container {
   margin-bottom: 10px;
   background: white;
 }
-/* line 27, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 68, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post {
   padding: 12px;
 }
-/* line 30, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 71, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .author {
   height: 40px;
   position: relative;
 }
-/* line 34, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 75, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .author .author_img {
   border: none;
   height: 40px;
@@ -95,18 +147,26 @@ body .post_container .post .author .author_img {
   background: gray;
   float: left;
 }
-/* line 42, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 83, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .author .author_name {
   position: absolute;
   top: 3px;
   left: 45px;
   font-size: 14px;
-  color: #3B5998;
   cursor: pointer;
   font-weight: bold;
   line-height: 19.3199996948242px;
 }
-/* line 53, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 91, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body .post_container .post .author .author_name a {
+  color: #3B5998;
+  text-decoration: none;
+}
+/* line 94, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+body .post_container .post .author .author_name a:hover {
+  text-decoration: underline;
+}
+/* line 100, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .author .timestamp a {
   position: absolute;
   top: 22px;
@@ -116,40 +176,40 @@ body .post_container .post .author .timestamp a {
   color: #9197A3;
   text-decoration: none;
 }
-/* line 61, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 108, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .author .timestamp a:hover {
   text-decoration: underline;
 }
-/* line 66, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 113, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .message {
   font-size: 14px;
   line-height: 19.3199996948242px;
   zoom: 1;
 }
-/* line 70, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 117, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .message a {
   color: #3b5998;
 }
-/* line 74, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 121, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .link {
   width: 100%;
   border: 1px solid;
   border-color: #e9eaed #e9eaed #d1d1d1;
 }
-/* line 78, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 125, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .link img {
   max-width: 100%;
 }
-/* line 81, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 128, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .link .story_text {
   margin: 10px 12px;
 }
-/* line 84, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 131, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .link .description {
   font-size: 12px;
   line-height: 16px;
 }
-/* line 88, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 135, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .link .title {
   font-size: 18px;
   font-family: Georgia, 'lucida grande', tahoma;
@@ -157,12 +217,12 @@ body .post_container .post .link .title {
   margin-bottom: 5px;
   margin-top: 0px;
 }
-/* line 94, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 141, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .link .title a {
   color: black;
   text-decoration: none;
 }
-/* line 99, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
+/* line 146, /Users/ap/code/labs/fb_server/app/assets/stylesheets/posts.scss */
 body .post_container .post .link .caption {
   font-size: 11px;
   line-height: 11px;

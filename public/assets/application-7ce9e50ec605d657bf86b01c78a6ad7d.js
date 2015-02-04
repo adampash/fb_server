@@ -11648,7 +11648,9 @@ return jQuery;
 
 }).call(this);
 (function() {
-  $(function() {
+  var ready;
+
+  ready = function() {
     $('.more_comments').on('click', function() {
       var $el, post_id, total_comments;
       post_id = this.id;
@@ -11665,14 +11667,31 @@ return jQuery;
         return false;
       }
     });
+    $(document).on('keyup', function(e) {
+      if (e.keyCode === 191) {
+        return $('.searchbox').focus();
+      }
+    });
     return $('.searchbox').on('keyup', function(e) {
       var query;
       if (e.keyCode === 13) {
-        query = $(this).val();
-        return window.location.href = "/search/" + query;
+        query = $(this).val().trim();
+        if (query === '') {
+          return false;
+        } else {
+          return window.location.href = "/search/" + query;
+        }
       }
     });
-  });
+  };
+
+  $(document).ready(ready);
+
+  $(document).on('page:load', ready);
+
+}).call(this);
+(function() {
+
 
 }).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files

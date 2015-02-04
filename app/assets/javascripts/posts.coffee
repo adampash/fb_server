@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+ready = ->
   $('.more_comments').on 'click', ->
     post_id = @id
     $el = $(@)
@@ -23,11 +23,11 @@ $ ->
 
   $('.searchbox').on 'keyup', (e) ->
     if e.keyCode is 13
-      query = $(@).val()
-      window.location.href = "/search/#{query}"
-      # $.ajax
-      #   method: "GET"
-      #   url: "/search/#{query}"
-      #   success: (data)->
-      #     debugger
-      #     $(".posts").html(data)
+      query = $(@).val().trim()
+      if query is ''
+        return false
+      else
+        window.location.href = "/search/#{query}"
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
