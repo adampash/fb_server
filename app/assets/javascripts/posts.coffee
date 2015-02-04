@@ -17,6 +17,10 @@ $ ->
           $("##{post_id}").parent('.comments').html(data)
       return false
 
+  $(document).on 'keyup', (e) ->
+    if e.keyCode is 191
+      $('.searchbox').focus()
+
   $('.searchbox').on 'keyup', (e) ->
     if e.keyCode is 13
       query = $(@).val()
