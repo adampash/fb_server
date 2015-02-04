@@ -9,7 +9,7 @@
     </div>
   </div>
   <%= prepare_text(post.message, @query) %>
-  <% if post.post_type == "link" %>
+  <% if post.post_type != "status" %>
     <div class="link">
       <% unless post.picture.nil? %>
         <img src="<%= post.picture.gsub('158', '470') %>" />
