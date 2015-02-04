@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def search
     @query = params[:query]
-    query = "%#{@query.downcase}%"
+    query = "#{@query.downcase}%"
     posts = Post.where('LOWER(message) LIKE ?', query)
     comments = Comment.where('LOWER(message) LIKE ?', query)
     all_results = (posts + comments).sort_by { |obj| obj.created_time }.reverse
