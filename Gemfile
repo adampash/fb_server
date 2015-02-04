@@ -26,8 +26,8 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
-  gem 'guard-livereload', require: false
-  gem "rack-livereload"
+  # gem 'guard-livereload', require: false
+  # gem "rack-livereload"
 end
 group :development, :test do
   gem 'factory_girl_rails'
