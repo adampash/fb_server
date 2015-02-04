@@ -52,6 +52,7 @@ body {
     display: block;
     text-decoration: none;
     margin-right: 5px;
+    margin-bottom: 10px;
     &:hover {
       text-decoration: underline;
     }
@@ -84,10 +85,16 @@ body {
     top: 3px;
     left: 45px;
     font-size: 14px;
-    color: #3B5998;
     cursor: pointer;
     font-weight: bold;
     line-height: 19.3199996948242px;
+    a {
+      color: #3B5998;
+      text-decoration: none;
+      &:hover {
+      text-decoration: underline;
+      }
+    }
   }
 
   .timestamp a {

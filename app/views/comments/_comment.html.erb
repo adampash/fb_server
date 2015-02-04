@@ -9,7 +9,7 @@
       <img class="comment_avatar" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/v/t1.0-1/c15.0.50.50/p50x50/10645251_10150004552801937_4553731092814901385_n.jpg?oh=37c91237919012390c2413251948e1fc&oe=55559310&__gda__=1431008679_64cd910771f70da726aa3313e1fcda2a" />
       <div class="text_container">
         <div class="author_name">
-          <%= comment.from_name %>
+          <%= link_to comment.from_name, "/users/#{comment.from_id}/posts" %>
         </div>
         <%= prepare_text(comment.message, @query) %>
           <div class="timestamp">
