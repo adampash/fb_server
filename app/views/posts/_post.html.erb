@@ -8,7 +8,7 @@
       <%= link_to(post.created_time.strftime("%B %-d, %Y at %-l:%M%P"), "/posts/#{post.id}") %>
     </div>
   </div>
-  <%= simple_format(auto_link(post.message, :html => {target: '_blank'}), class: 'message') %>
+  <%= simple_format(highlight(auto_link(post.message, :html => {target: '_blank'}), @query), class: 'message') %>
   <% if post.post_type == "link" %>
     <div class="link">
       <% unless post.picture.nil? %>
