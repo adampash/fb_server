@@ -11,9 +11,7 @@
         <div class="author_name">
           <%= comment.from_name %>
         </div>
-        <%= simple_format(
-          highlight(
-            auto_link(comment.message, :html => {target: '_blank'}) {|text| truncate(text, :length => 42)}, @query), class: 'message') %>
+        <%= prepare_text(comment.message, @query) %>
           <div class="timestamp">
             <%= comment.created_time.strftime("%B %-d, %Y at %-l:%M%P") %>
           </div>
