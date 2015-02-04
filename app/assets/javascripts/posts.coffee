@@ -19,7 +19,7 @@ ready = ->
 
   $(document).on 'keyup', (e) ->
     if e.keyCode is 191
-      $('.searchbox').focus()
+      $('.searchbox').select()
 
   $('.searchbox').on 'keyup', (e) ->
     if e.keyCode is 13
