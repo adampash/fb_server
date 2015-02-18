@@ -34,6 +34,7 @@ body {
     font-size: 12px;
     margin: 0 auto;
     width: 470px;
+    max-width: 100%;
     display: inline-block;
     text-align: center;
     a {
@@ -154,3 +155,8 @@ body {
 }
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+    padding: 10px;
+  }
+}
